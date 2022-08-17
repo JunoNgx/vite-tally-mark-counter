@@ -34,25 +34,23 @@
 
 <template lang="pug">
     .mark(
-        class!="{isCounted ? 'is-counted' : ''}"
+        class!=[
+            "{isCounted ? 'is-counted' : ''}", 
+            "{isPreviewed ? 'is-previewed' : ''}", 
+        ]
         on:click!="{saveCountValue}"
         on:mouseenter!="{showPreviewCount}"
         on:mouseleave!="{hidePreviewCount}"
     )
-        //- a {value}
-        //- a {isCounted}
 </template>
 
 <style lang="sass">
     .mark
-        border: solid 1px cyan
+        border: solid 1px white
         align-self: center
         width: 7px
         height: 60px
         cursor: pointer
-
-        &:hover
-            background-color: cyan
 
         &.is-counted
             border-color: indianred
