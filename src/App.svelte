@@ -55,7 +55,6 @@
                 opacity: 0.7
                 
         .tally-marks-container
-            background-color: indianred
             width: 100%
             display: flex
             flex-flow: row wrap
