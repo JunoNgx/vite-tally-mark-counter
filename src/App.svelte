@@ -7,10 +7,9 @@
 <template lang="pug">
     .container
         .counter {counter}
-        - var i = 0
         .tally-marks-container
-            while i < 20
-                Counter(serialNumber=i++)
+            - for (let i = 0; i < 20; i++)
+                Counter(serialNumber=i)
 </template>
 
 <style lang="sass">
