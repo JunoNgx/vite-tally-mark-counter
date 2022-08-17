@@ -1,14 +1,14 @@
 <script lang="ts">
     import Counter from "./lib/Counter.svelte"
 
-    let counter = 1;
+    let counter: Number = 1
 </script>
 
 <template lang="pug">
     .container
         .counter {counter}
         .tally-marks-container
-            - for (let i = 0; i < 20; i++)
+            - for (let i =  0; i < 20; i++)
                 Counter(serialNumber=i)
 </template>
 
