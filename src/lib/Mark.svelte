@@ -10,9 +10,12 @@
 
 <style lang="sass">
     .mark
+        border: solid 1px cyan
         align-self: center
-        background-color: cyan
         width: 7px
         height: 60px
-        
+        cursor: pointer
+
+        &:hover
+            background-color: cyan
 </style>
