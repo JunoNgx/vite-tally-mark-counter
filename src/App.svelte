@@ -23,7 +23,7 @@
         .counter.counter-actual {$savedCount}
         .counter.counter-preview
             +if('$previewCount > 0')
-                a {$previewCount}
+                | {$previewCount}
 
         .tally-marks-container
             - for (let i =  0; i < 20; i++)
@@ -51,8 +51,8 @@
                 color: indianred
 
             &.counter-preview
-                color: DarkSeaGreen
-                opacity: 0.7
+                color: cyan
+                opacity: 0.2
                 
         .tally-marks-container
             width: 100%
