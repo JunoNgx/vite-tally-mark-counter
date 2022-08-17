@@ -2,20 +2,6 @@
     import { onDestroy } from "svelte"
     import { savedCount, previewCount } from "./store"
     import Counter from "./lib/Counter.svelte"
-
-    // let savedCountValue
-    // let previewCountValue
-
-    // const unsubscribeSavedCount = savedCount.subscribe(value => {
-    //     savedCountValue = value
-    // })
-
-    // // const unsubscribePreviewCount = previewCountValue.subscribe(value => {
-    // //     previewCountValue = value
-    // // })
-
-    // onDestroy(unsubscribeSavedCount)
-    // // onDestroy(unsubscribePreviewCount)
 </script>
 
 <template lang="pug">
@@ -26,7 +12,7 @@
                 | {$previewCount}
 
         .tally-marks-container
-            - for (let i =  0; i < 20; i++)
+            - for (let i =  0; i < 21; i++)
                 Counter(serialNumber=i)
 </template>
 
