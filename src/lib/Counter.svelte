@@ -1,14 +1,16 @@
 <script lang="ts">
     import Mark from "./Mark.svelte"
-
-    export let serialNumber = 0
+    export let serialNumber: Number = 0
 </script>
 
 <template lang="pug">
-    - var i = 1
     .counter-container
-        while i < 6
-            Mark(value=i++)
+        +each("Array(5).fill().map((_, i) => i) as index")
+            - const isFifth = (i % 5) === 0
+            Mark(
+                value!="{index + serialNumber * 5}"
+                isFifth!=isFifth
+            )
 </template>
 
 <style lang="sass">
@@ -19,5 +21,4 @@
         display: flex
         flex-flow: row nowrap
         justify-content: space-around
-
 </style>
