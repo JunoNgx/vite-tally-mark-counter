@@ -5,7 +5,7 @@
     export let isFifth: Boolean = false  
 
     function saveCountValue() {
-        savedCount.update(_ => value)
+        savedCount.set(value)
     }
 </script>
 
