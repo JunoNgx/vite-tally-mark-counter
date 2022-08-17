@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Counter from './lib/Counter.svelte'
+    import Counter from "./lib/Counter.svelte"
 
     let counter = 1;
 </script>
