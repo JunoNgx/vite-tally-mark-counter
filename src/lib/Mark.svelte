@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { onDestroy } from "svelte"
     import { savedCount, previewCount } from  "./../store"
 
     export let value: Number = 0
@@ -9,9 +10,12 @@
         savedCount.set(value)
     }
 
-    const unsubscribe = savedCount.subscribe(newCountValue => {
+    const unsubscribeSavedCount = savedCount.subscribe(newCountValue => {
         isCounted = value <= newCountValue
     });
+
+    onDestroy(unsubscribeSavedCount)
+
 </script>
 
 <template lang="pug">
@@ -19,8 +23,8 @@
         class!="{isCounted ? 'is-counted' : ''}"
         on:click!="{saveCountValue}"
     )
-        a {value}
-        a {isCounted}
+        //- a {value}
+        //- a {isCounted}
 </template>
 
 <style lang="sass">
