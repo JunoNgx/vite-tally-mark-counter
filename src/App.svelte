@@ -37,7 +37,7 @@
                 color: indianred
 
             &.counter-preview
-                color: cyan
+                color: DarkSeaGreen
                 opacity: 0.2
                 
         .tally-marks-container

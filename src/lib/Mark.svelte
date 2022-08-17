@@ -71,8 +71,8 @@
             +trans
 
         &.is-previewed
-            // border-color: cyan
-            background-color: cyan
+            // border-color: DarkSeaGreen
+            background-color: DarkSeaGreen
             +trans
 
 </style>
