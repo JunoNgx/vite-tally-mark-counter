@@ -3,7 +3,7 @@
     import { savedCount, previewCount } from  "./../store"
 
     export let value: number = 0
-    export let isFifth: boolean = false
+    const isFifth: boolean = (value % 5 === 0)
     let isCounted: boolean = false
     let isPreviewed: boolean = false
 
@@ -20,11 +20,11 @@
     }
 
     const unsubscribeSavedCount = savedCount.subscribe(newCountValue => {
-        isCounted = value <= newCountValue
+        isCounted = value > 0 && value <= newCountValue
     });
 
     const unsubscribePreviewCount = previewCount.subscribe(newCountValue => {
-        isPreviewed  = value <= newCountValue
+        isPreviewed = value > 0 && value <= newCountValue
     });
 
     onDestroy(unsubscribeSavedCount)
@@ -36,7 +36,8 @@
     .mark(
         class!=[
             "{isCounted ? 'is-counted' : ''}", 
-            "{isPreviewed ? 'is-previewed' : ''}", 
+            "{isPreviewed ? 'is-previewed' : ''}",
+            "{isFifth ? 'is-fifth' : ''}"
         ]
         on:click!="{saveCountValue}"
         on:mouseenter!="{showPreviewCount}"
@@ -46,11 +47,17 @@
 
 <style lang="sass">
     .mark
+        margin: 0
         border: solid 1px white
         align-self: center
-        width: 15px
+        width: 12px
         height: 60px
         cursor: pointer
+
+        &.is-fifth
+            position: absolute
+            transform: rotate(82deg)
+            height: 180px
 
         &.is-counted
             border-color: indianred
@@ -59,7 +66,5 @@
         &.is-previewed
             border-color: cyan
             background-color: cyan
-
-        &.is
 
 </style>
