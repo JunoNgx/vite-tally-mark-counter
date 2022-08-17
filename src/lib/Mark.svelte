@@ -1,10 +1,18 @@
 <script lang="ts">
+    import { savedCount, previewCount } from  "./../store"
+
     export let value: Number = 0
-    export let isFifth: Boolean = false
+    export let isFifth: Boolean = false  
+
+    function saveCountValue() {
+        savedCount.update(_ => value)
+    }
 </script>
 
 <template lang="pug">
-    .mark
+    .mark(
+        on:click!="{saveCountValue}"
+    )
         a {value}
 </template>
 
