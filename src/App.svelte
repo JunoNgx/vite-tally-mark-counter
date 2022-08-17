@@ -1,12 +1,30 @@
 <script lang="ts">
+    import { onDestroy } from "svelte"
+    import { savedCount, previewCount } from "./store"
     import Counter from "./lib/Counter.svelte"
 
-    let counter: Number = 1
+    // let savedCountValue
+    // let previewCountValue
+
+    // const unsubscribeSavedCount = savedCount.subscribe(value => {
+    //     savedCountValue = value
+    // })
+
+    // // const unsubscribePreviewCount = previewCountValue.subscribe(value => {
+    // //     previewCountValue = value
+    // // })
+
+    // onDestroy(unsubscribeSavedCount)
+    // // onDestroy(unsubscribePreviewCount)
 </script>
 
 <template lang="pug">
     .container
-        .counter {counter}
+        .counter.counter-actual {$savedCount}
+        .counter.counter-preview
+            +if('$previewCount > 0')
+                a {$previewCount}
+
         .tally-marks-container
             - for (let i =  0; i < 20; i++)
                 Counter(serialNumber=i)
@@ -29,6 +47,13 @@
             display: grid
             place-items: center center
 
+            &.counter-actual
+                color: indianred
+
+            &.counter-preview
+                color: DarkSeaGreen
+                opacity: 0.7
+                
         .tally-marks-container
             background-color: indianred
             width: 100%
