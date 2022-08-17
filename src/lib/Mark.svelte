@@ -1,10 +1,13 @@
 <script lang="ts">
-    export let value = 0;
-    export let isFifthMark = false;
+    export let parentSn: Number = 0
+    export let position: Number = 0
+    export let isFifth: Boolean = false
+    const value = position + 99
 </script>
 
 <template lang="pug">
     .mark
+        a {value}
 </template>
 
 <style lang="sass">
