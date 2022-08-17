@@ -2,10 +2,10 @@
     import { onDestroy } from "svelte"
     import { savedCount, previewCount } from  "./../store"
 
-    export let value: Number = 0
-    export let isFifth: Boolean = false
-    let isCounted: Boolean = false
-    let isPreviewed: Boolean = false
+    export let value: number = 0
+    export let isFifth: boolean = false
+    let isCounted: boolean = false
+    let isPreviewed: boolean = false
 
     function saveCountValue() {
         savedCount.set(value)
@@ -48,7 +48,7 @@
     .mark
         border: solid 1px white
         align-self: center
-        width: 7px
+        width: 15px
         height: 60px
         cursor: pointer
 
@@ -59,4 +59,7 @@
         &.is-previewed
             border-color: cyan
             background-color: cyan
+
+        &.is
+
 </style>

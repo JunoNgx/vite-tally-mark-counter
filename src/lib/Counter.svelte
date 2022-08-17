@@ -1,6 +1,6 @@
 <script lang="ts">
     import Mark from "./Mark.svelte"
-    export let serialNumber: Number = 0
+    export let serialNumber: number = 0
 </script>
 
 <template lang="pug">
