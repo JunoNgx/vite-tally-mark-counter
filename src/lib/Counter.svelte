@@ -6,11 +6,8 @@
 <template lang="pug">
     .counter-container
         +each("Array(5).fill().map((_, i) => i) as index")
-            - const isFifth = (i % 5) === 0
-            Mark(
-                value!="{index + serialNumber * 5}"
-                isFifth!=isFifth
-            )
+            //- - const isFifth = (i % 5) === 0
+            Mark(value!="{index + serialNumber * 5}")
 </template>
 
 <style lang="sass">
