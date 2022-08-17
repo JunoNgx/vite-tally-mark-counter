@@ -13,7 +13,7 @@
 <style lang="sass">
     .counter-container
         border: 2px solid white
-        padding: 0px 5px
+        padding: 0px 30px
         width: 150px
         height: 75px
         display: flex
