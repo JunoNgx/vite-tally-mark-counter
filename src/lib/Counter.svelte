@@ -1,14 +1,14 @@
 <script lang="ts">
+    import Mark from "./Mark.svelte"
+
     export let serialNumber = 0
 </script>
 
 <template lang="pug">
+    - var i = 1
     .counter-container
-        .mark.mark-1
-        .mark.mark-2
-        .mark.mark-3
-        .mark.mark-4
-        .mark.mark-5
+        while i < 6
+            Mark(value=i++)
 </template>
 
 <style lang="sass">
@@ -16,5 +16,8 @@
         border: 2px solid white
         width: 150px
         height: 75px
-        
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-around
+
 </style>
