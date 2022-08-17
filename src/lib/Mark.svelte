@@ -20,11 +20,11 @@
     }
 
     const unsubscribeSavedCount = savedCount.subscribe(newCountValue => {
-        isCounted = value > 0 && value <= newCountValue
+        isCounted = value <= newCountValue
     });
 
     const unsubscribePreviewCount = previewCount.subscribe(newCountValue => {
-        isPreviewed = value > 0 && value <= newCountValue
+        isPreviewed = value <= newCountValue
     });
 
     onDestroy(unsubscribeSavedCount)
@@ -46,13 +46,19 @@
 </template>
 
 <style lang="sass">
+
+    @mixin trans
+        transition: background-color 0.3s ease-out
+
     .mark
         margin: 0
-        border: solid 1px white
+        // border: solid 1px white
+        background-color: white
         align-self: center
         width: 12px
         height: 60px
         cursor: pointer
+        +trans
 
         &.is-fifth
             position: absolute
@@ -60,11 +66,13 @@
             height: 180px
 
         &.is-counted
-            border-color: indianred
+            // border-color: indianred
             background-color: indianred
+            +trans
 
         &.is-previewed
-            border-color: cyan
+            // border-color: cyan
             background-color: cyan
+            +trans
 
 </style>
