@@ -17,6 +17,9 @@
 </template>
 
 <style lang="sass">
+    :global(body)
+        background-color: #444
+    
     .container
         padding: 12px
         border: 2px solid white
