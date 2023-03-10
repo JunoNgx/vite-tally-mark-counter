@@ -44,6 +44,7 @@
                 
         .tally-marks-container
             width: 100%
+            margin-top: 0.5rem
             display: flex
             flex-flow: row wrap
             justify-content: space-around
