@@ -2,6 +2,7 @@
     import { onDestroy } from "svelte"
     import { savedCount, previewCount } from "./store"
     import Counter from "./lib/Counter.svelte"
+    // ISSUE: Can't seem to pass variables into Pug's loop
 </script>
 
 <template lang="pug">
@@ -12,7 +13,7 @@
                 | {$previewCount}
 
         .tally-marks-container
-            - for (let i =  0; i < 21; i++)
+            - for (let i =  0; i < 20; i++)
                 Counter(serialNumber=i)
 </template>
 
