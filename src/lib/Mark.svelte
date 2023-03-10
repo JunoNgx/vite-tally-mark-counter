@@ -64,6 +64,9 @@
             position: absolute
             transform: rotate(82deg)
             height: 160px
+        
+        &:not(.is-fifth)
+            z-index: 1
 
         &.is-counted
             // border-color: indianred
