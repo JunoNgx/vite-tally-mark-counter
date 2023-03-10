@@ -63,7 +63,7 @@
         &.is-fifth
             position: absolute
             transform: rotate(82deg)
-            height: 160px
+            height: 130px
         
         &:not(.is-fifth)
             z-index: 1

@@ -13,8 +13,8 @@
 <style lang="sass">
     .counter-container
         // border: 2px solid white
-        padding: 0px 30px
-        width: 150px
+        padding: 0px 15px
+        width: 120px
         height: 75px
         display: flex
         flex-flow: row nowrap
