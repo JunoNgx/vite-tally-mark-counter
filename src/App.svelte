@@ -24,8 +24,6 @@
     .container
         padding: 12px
         border: 2px solid white
-        width: 720px
-        height: 768px
         display: flex
         flex-flow: column nowrap
         justify-content: space-around
@@ -48,6 +46,6 @@
             width: 100%
             display: flex
             flex-flow: row wrap
-            justify-content: space-between
+            justify-content: space-around
             gap: 10px
 </style>
