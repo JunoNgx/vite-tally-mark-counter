@@ -13,7 +13,7 @@
                 | {$previewCount}
 
         .tally-marks-container
-            - for (let i =  0; i < 20; i++)
+            - for (let i =  0; i < 21; i++)
                 Counter(serialNumber=i)
 </template>
 
