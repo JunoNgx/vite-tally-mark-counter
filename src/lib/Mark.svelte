@@ -63,7 +63,7 @@
         &.is-fifth
             position: absolute
             transform: rotate(82deg)
-            height: 180px
+            height: 160px
 
         &.is-counted
             // border-color: indianred
